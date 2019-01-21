@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <form action="/wilder" method="post">
         {{ csrf_field() }}
         <div class="row">
-            <input type="text" name="lastname" placeholder="Nom" class="form-control offset-3 col-3 mt-3 mr-1">
+            <input type="text" name="lastname" placeholder="Nom" class="form-control offset-3 col-3 mt-3">
             <input type="text" name="name" placeholder="Prénom" class="form-control col-3 mt-3">
         </div>
         <div class="row">
