@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');
+
 Route::get('/wilder', 'WilderRegistrationController@show');
 
 Route::post('/wilder', function(){
@@ -33,6 +35,6 @@ Route::post('/wilder', function(){
     $wilder -> tomorrow = request('tomorrow');
     $wilder -> save();
 
-    return 'Le wilder ' . $_POST['name'] . ' ' . $_POST['lastname'] .' est enregistré dans la base de données';
+    return 'Le wilder ' . $_POST['name'] . ' ' . $_POST['lastname'] .' est enregistré dans la base de données.';
 
 });
