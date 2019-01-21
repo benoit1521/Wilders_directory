@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/wilder', 'WilderRegistrationController@show');
+Route::get('/wilder', 'WilderRegistrationController@show')->name('wilder');
 
 Route::post('/wilder', function(){
     $wilder = new App\Wilders;

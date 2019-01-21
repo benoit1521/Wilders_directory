@@ -21,7 +21,7 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <button type="button" class="btn btn-outline-primary mt-3">Inscrire un nouveau wilder</button>
+            <a href="{{route('wilder')}}" class="btn btn-outline-primary mt-3">Inscrire un nouveau wilder</a>
         </div>
     </div>
 </div>
