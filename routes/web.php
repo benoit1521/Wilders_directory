@@ -21,6 +21,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/wilder', 'WilderRegistrationController@show')->name('wilder');
 
+// Route::get('/uploadfile', 'UploadfileController@index');
+// Route::post('/wilder', 'WilderRegistrationController@upload');
+
 Route::post('/wilder', function(){
     $wilder = new App\Wilders;
     $wilder -> lastname = request('lastname');
@@ -33,6 +36,7 @@ Route::post('/wilder', function(){
     $wilder -> where = request('where');
     $wilder -> why = request('why');
     $wilder -> tomorrow = request('tomorrow');
+    $wilder -> photo = request('photo');
     $wilder -> save();
 
     return 'Le wilder ' . $_POST['name'] . ' ' . $_POST['lastname'] .' est enregistré dans la base de données.';
