@@ -21,7 +21,7 @@ class WilderRegistrationController extends Controller
 
     public function index()
     {
-        $wilders = Wilders::all();   
+        $wilders = Wilders::all();
         foreach($wilders as $wilder) {
             echo $wilder->lastname . '<br>';
         }

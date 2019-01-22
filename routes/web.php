@@ -39,7 +39,7 @@ Route::post('/wilder', function(){
 
 });
 
-Route::get('/wilders', 'WilderRegistrationController@index');
+Route::get('/wilders', 'WilderRegistrationController@index')->name('wilders');
 
 // Route::get('/wilders', function () {
 //     $wilder = App\Wilders::all();
