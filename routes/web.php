@@ -18,3 +18,32 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/wilder', 'WilderRegistrationController@show')->name('wilder');
+
+Route::post('/wilder', function(){
+    $wilder = new App\Wilders;
+    $wilder -> lastname = request('lastname');
+    $wilder -> name = request('name');
+    $wilder -> email = request('email');
+    $wilder -> school = request('school');
+    $wilder -> promo = request('promo');
+    $wilder -> language = request('language');
+    $wilder -> description = request('description');
+    $wilder -> where = request('where');
+    $wilder -> why = request('why');
+    $wilder -> tomorrow = request('tomorrow');
+    $wilder -> save();
+
+    return 'Le wilder ' . $_POST['name'] . ' ' . $_POST['lastname'] .' est enregistré dans la base de données.';
+
+});
+
+Route::get('/wilders', 'WilderRegistrationController@index')->name('wilders');
+
+// Route::get('/wilders', function () {
+//     $wilder = App\Wilders::all();
+//     return view('wilders', [
+//         'wilders' => $wilder
+//     ]);
+// });

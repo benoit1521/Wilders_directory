@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWildersTable extends Migration
+class WildersTable extends Migration
+
 {
     /**
      * Run the migrations.
@@ -15,12 +16,16 @@ class CreateWildersTable extends Migration
     {
         Schema::create('wilders', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
             $table->string('lastname');
-            $table->date('birthdate');
-            $table->string('language');
-            $table->string('school');
+            $table->string('name');
             $table->string('email')->unique();
+            $table->string('school');
+            $table->string('promo');
+            $table->string('language');
+            $table->string('descritption');
+            $table->string('where');
+            $table->string('why');
+            $table->string('tomorrow');
             $table->timestamps();
         });
     }
