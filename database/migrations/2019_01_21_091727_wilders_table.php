@@ -22,10 +22,11 @@ class WildersTable extends Migration
             $table->string('school');
             $table->string('promo');
             $table->string('language');
-            $table->string('descritpion');
+            $table->string('description');
             $table->string('where');
             $table->string('why');
             $table->string('tomorrow');
+            $table->string('photo');
             $table->timestamps();
         });
     }
