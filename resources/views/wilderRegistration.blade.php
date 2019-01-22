@@ -8,7 +8,7 @@
                 <div class="card-header">Inscription d'un nouveau wilder</div>
                 <div class="card-body">
 
-                    <form action="{{route('wilder')}}" method="POST">
+                    <form action="{{route('wilder')}}" method="POST" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">Nom</label>
@@ -73,7 +73,7 @@
                                 <input type="text" name="tomorrow" placeholder="Où se voit-il demain ?" class="form-control ">
                             </div>
                         </div>
-
+                    
                         <div class="form-group row">
                             <label for="photo" class="col-md-4 col-form-label text-md-right">
                                 Ajouter une photo pour ce wilder ?
@@ -85,7 +85,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-outline-primary ">
+                                <button type="submit"  class="btn btn-outline-primary ">
                                     Ajouter le wilder au book
                                 </button>
                             </div>
