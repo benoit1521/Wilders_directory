@@ -22,7 +22,7 @@ class WildersTable extends Migration
             $table->string('school');
             $table->string('promo');
             $table->string('language');
-            $table->string('descritpion');
+            $table->string('descritption');
             $table->string('where');
             $table->string('why');
             $table->string('tomorrow');

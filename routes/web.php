@@ -38,3 +38,12 @@ Route::post('/wilder', function(){
     return 'Le wilder ' . $_POST['name'] . ' ' . $_POST['lastname'] .' est enregistré dans la base de données.';
 
 });
+
+Route::get('/wilders', 'WilderRegistrationController@index');
+
+// Route::get('/wilders', function () {
+//     $wilder = App\Wilders::all();
+//     return view('wilders', [
+//         'wilders' => $wilder
+//     ]);
+// });
